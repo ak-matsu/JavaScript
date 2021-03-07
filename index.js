@@ -8,6 +8,12 @@ window.addEventListener('load',function(){
 // pullDownButton変数へlistsを引き渡す。
 const pullDownButton = document.getElementById("lists")
 
+  // プルダウンの上にマウスカーソルを持ってくると薄い赤に変わる。
+  pullDownButton.addEventListener('mouseover',function(){
+    // setAttributeは指定した要素上に新しい属性、既存の属性値を変更する。
+    pullDownButton.setAttribute("style","background-color:#FFBEDA;")
+  })
+
   // プルダウンの上にマウスカーソルを持ってくるとイベント発火
   pullDownButton.addEventListener('mouseover',function(){
     console.log("mouseover OK")
