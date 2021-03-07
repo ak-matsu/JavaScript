@@ -1,4 +1,3 @@
-
 // ページ全体が読み込まれたあとにJavaScriptの処理が実行される。
 window.addEventListener('load',function(){
 // constは後から書き換えることのできない変数
@@ -8,6 +7,7 @@ window.addEventListener('load',function(){
 // pullDownButton変数へlistsを引き渡す。
 const pullDownButton = document.getElementById("lists")
 const pullDownParents = document.getElementById("pull-down")
+const pullDownChild = document.querySelectorAll(".pull-down-list")
 
 
 // thisとはイベント発火元ととなった要素を取得できる。
@@ -33,5 +33,12 @@ const pullDownParents = document.getElementById("pull-down")
       // pullDownParentsにdisplay:block;が付与されていない場合（つまり非表示の時）実行される
       pullDownParents.setAttribute("style", "display:block;")
     }
+  })
+
+  // コースの値を取得し表示する
+  pullDownChild.forEach(function(list) {
+    list.addEventListener('click', function() {
+      console.log(list)
+    })
   })
 })
