@@ -12,4 +12,8 @@ const pullDownButton = document.getElementById("lists")
   pullDownButton.addEventListener('mouseover',function(){
     console.log("mouseover OK")
   })
+  // クリックすることでイベント発火
+  pullDownButton.addEventListener('click',function(){
+    console.log("click OK")
+  })
 })
