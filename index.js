@@ -9,14 +9,14 @@ window.addEventListener('load',function(){
 const pullDownButton = document.getElementById("lists")
 
   // プルダウンの上にマウスカーソルを持ってくると薄い赤に変わる。
-  // setAttributeは指定した要素上に新しい属性、既存の属性値を変更する。
   pullDownButton.addEventListener('mouseover', function(){
+    // setAttributeは指定した要素上に新しい属性、既存の属性値を変更する。
     pullDownButton.setAttribute("style", "background-color:#FFBEDA;")
   })
 
   // プルダウンの上にマウスカーソルを持ってくるとイベント発火
-  // removeAttributeはマウスカーソルが離れたときインラインスタイルを削除する。
   pullDownButton.addEventListener('mouseout', function(){
+    // removeAttributeはマウスカーソルが離れたときインラインスタイルを削除する。
     pullDownButton.removeAttribute("style", "background-color:#FFBEDA;")
   })
 
