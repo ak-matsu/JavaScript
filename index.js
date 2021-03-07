@@ -8,6 +8,7 @@ window.addEventListener('load',function(){
 const pullDownButton = document.getElementById("lists")
 const pullDownParents = document.getElementById("pull-down")
 const pullDownChild = document.querySelectorAll(".pull-down-list")
+const currentList = document.getElementById("current-list")
 
 
 // thisとはイベント発火元ととなった要素を取得できる。
@@ -39,7 +40,7 @@ const pullDownChild = document.querySelectorAll(".pull-down-list")
   pullDownChild.forEach(function(list) {
     list.addEventListener('click', function() {
       value = list.innerHTML
-      console.log(value)
+      currentList.innerHTML = value
     })
   })
 })
