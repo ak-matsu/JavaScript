@@ -7,6 +7,7 @@ window.addEventListener('load',function(){
 // getElementById("id名")はDOMツリーから特定のHTML要素を取得するためのメソッドの1つ。
 // pullDownButton変数へlistsを引き渡す。
 const pullDownButton = document.getElementById("lists")
+const pullDownParents = document.getElementById("pull-down")
 
   // プルダウンの上にマウスカーソルを持ってくると薄い赤に変わる。
   pullDownButton.addEventListener('mouseover', function(){
@@ -22,6 +23,6 @@ const pullDownButton = document.getElementById("lists")
 
   // クリックすることでイベント発火
   pullDownButton.addEventListener('click',function(){
-    console.log("click OK")
+    pullDownParents.setAttribute("style","display:block;")
   })
 })
